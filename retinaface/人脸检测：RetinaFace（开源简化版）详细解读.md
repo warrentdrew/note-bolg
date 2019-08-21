@@ -16,9 +16,11 @@ RetinaFace的mnet本质是基于RetinaNet的结构，采用了特征金字塔的
 
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190821155617191.png#pic_centercenter)
+
 上图为SSH网络的检测模块，将一个上下文模块与conv叠加后生成分类头和回归头得到网络的输出。
 mnet网络在使用SSH检测模块的同时实现了多任务学习，即在分类和回归的基础上加入了目标点的回归。官方的网络结构采用了5个目标点的学习，后续也可以修改为更多目标点，比如AFLW中的21个目标点以及常用的68或者106个目标点
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190821160126691.png#pic_center)
+
 上图是原版RetinaFace论文中的检测分支图，注意在开源简化版的不包含self-supervision部分，但是有5个关键点的extra-supervision部分
 
 ## 检测
